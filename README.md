@@ -1,7 +1,20 @@
 # generator-duxedo
-> No bullshit React + Redux boilerplate generator
+> No bullshit React + Redux project generator
 
-Duxedo is an opinionated React + Redux boilerplate generator that includes various utilities to help you focus on writing your redux application and not worry about setting up.
+Duxedo is a highly opinionated React + Redux project generator that includes various utilities to help you focus on what you do best, and forget the configuration for once.
+
+### Motivation
+Getting into react development is very challenging especially if you are new to the ecosystem. Our goal is to develop generator commands akin to that of frameworks like Phoenix and Rails for the React and Redux stack.
+
+### Features
+1. React
+3. Redux
+4. Redux Saga
+5. Karma + Chai + Sinon
+6. Hot Module Reloading OOTB
+7. Webpack
+8. Sass
+9. Highly opinionated ducks architecture [Ducks](https://github.com/erikras/ducks-modular-redux)
 
 ### Usage
 
