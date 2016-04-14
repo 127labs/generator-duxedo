@@ -1,6 +1,6 @@
 {
   "name": "generator-duxedo",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "No bullshit React Redux project generator",
   "homepage": "https://github.com/127labs/generator-duxedo",
   "author": {
@@ -49,5 +49,5 @@
     "prepublish": "gulp prepublish",
     "test": "gulp"
   },
-  "license": "Apache-2.0"
+  "license": "MIT"
 }
