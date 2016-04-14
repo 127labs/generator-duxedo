@@ -1,4 +1,4 @@
-# generator-duxedo
+# Duxedo
 > No bullshit React + Redux project generator
 
 Duxedo is a highly opinionated React + Redux project generator that includes various utilities to help you focus on what you do best, and forget the configuration for once.
