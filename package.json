@@ -1,12 +1,12 @@
 {
   "name": "generator-duxedo",
-  "version": "0.0.0",
-  "description": "No bullshit React Redux boilerplate generator",
+  "version": "0.0.1",
+  "description": "No bullshit React Redux project generator",
   "homepage": "https://github.com/127labs/generator-duxedo",
   "author": {
-    "name": "Faris Amali Alis",
-    "email": "farisamalialis@ymail.com",
-    "url": "https://github.com/fardormu/"
+    "name": "127 Labs",
+    "email": "admin@127labs.com",
+    "url": "https://github.com/127labs"
   },
   "files": [
     "generators"
