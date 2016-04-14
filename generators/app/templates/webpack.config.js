@@ -1,7 +1,12 @@
-var getConfig = require('hjs-webpack')
-
-module.exports = getConfig({
+const config = require('hjs-webpack')({
   in: 'src/index.js',
-  out: 'release',
-  clearBeforeBuild: true
+  out: 'dist',
+  clearBeforeBuild: true,
+  devServer: {
+    stats: {
+      colors: true,
+    },
+  },
 })
+
+module.exports = config

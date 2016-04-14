@@ -36,12 +36,6 @@ module.exports = yeoman.Base.extend({
       path.join(this.destinationRoot(), this.appName, 'README.md'),
       { appName: this.appName }
     );
-
-    // copy dotfiles
-    // this.fs.copy(
-    //   this.templatePath('.*'),
-    //   this.destinationRoot() + '/' + this.appName
-    // );
   },
 
   install: function () {
