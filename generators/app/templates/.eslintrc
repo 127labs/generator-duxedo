@@ -1,0 +1,12 @@
+{
+  "extends": "airbnb",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+    },
+  },
+  "rules": {
+    "semi": [2, "never"],
+    "react/jsx-curly-spacing": [2, "always"]
+  }
+}
