@@ -8,8 +8,8 @@
     "start": "hjs-dev-server",
     "build": "webpack",
     "deploy": "npm run build && surge -p dist -d <%= domain %>",
-    "test": "./node_modules/karma/bin/karma start",
-    "lint": "eslint ./src/**/*.js",
+    "test": "karma start",
+    "lint": "eslint ./src/**/* --ext .jsx --ext .js",
     "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
