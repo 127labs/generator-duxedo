@@ -1,5 +1,3 @@
-import App from './App'
-import Home from './Home'
-import NotFound from './NotFound'
-
-export default { App, Home, NotFound }
+export { default as App } from './App'
+export { default as Home } from './Home'
+export { default as NotFound } from './NotFound'
