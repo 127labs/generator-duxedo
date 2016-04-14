@@ -18,29 +18,30 @@ module.exports = yeoman.Base.extend({
     // copy non-template files
     this.fs.copy([
       this.templatePath('**/*'),
+      this.templatePath('.*'),
       '!**/*.ejs'
     ],
-      this.destinationRoot() + '/' + this.appName
+      path.join(this.destinationRoot(), this.appName)
     );
 
     //copy template files
     this.fs.copyTpl(
       this.templatePath('package.json.ejs'),
-      this.destinationPath(this.appName + '/' + 'package.json'),
+      path.join(this.destinationRoot(), this.appName, 'package.json'),
       { appName: this.appName }
     );
 
     this.fs.copyTpl(
       this.templatePath('README.md.ejs'),
-      this.destinationPath(this.appName + '/' + 'README.md'),
+      path.join(this.destinationRoot(), this.appName, 'README.md'),
       { appName: this.appName }
     );
 
     // copy dotfiles
-    this.fs.copy(
-      this.templatePath('.*'),
-      this.destinationRoot() + '/' + this.appName
-    );
+    // this.fs.copy(
+    //   this.templatePath('.*'),
+    //   this.destinationRoot() + '/' + this.appName
+    // );
   },
 
   install: function () {
