@@ -1,13 +1,13 @@
 {
-  "name": "<%= appName %>",
+  "name": "<%= name %>",
   "version": "0.0.1",
-  "description": "<%= appName %> description",
-  "author": "author-name",
+  "description": "<%= description %>",
+  "author": "<%= author %>",
   "private": true,
   "scripts": {
     "start": "hjs-dev-server",
     "build": "webpack",
-    "deploy": "npm run build && surge -p dist -d <%= appName %>.surge.sh",
+    "deploy": "npm run build && surge -p dist -d <%= domain %>",
     "test": "./node_modules/karma/bin/karma start",
     "lint": "eslint ./src/**/*.js",
     "lint:fix": "npm run lint -- --fix"
