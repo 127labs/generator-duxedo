@@ -4,17 +4,19 @@
 Duxedo is a highly opinionated React + Redux project generator that includes various utilities to help you focus on what you do best, and forget the configuration for once.
 
 ### Motivation
-Getting into react development is very challenging especially if you are new to the ecosystem. Our goal is to develop generator commands akin to that of frameworks like Phoenix and Rails for the React and Redux stack.
+Getting into react development is a very challenging task. First, you need to configure webpack, then you need to configure a redux store. You can't have a react app without a router right, now you need to find and configure the router. With duxedo, our goal is to take the pain off setting up a react + redux project by using a generator akin to that of frameworks like Rails or Phoenix for the React and Redux stack.
 
 ### Features
 1. React
 3. Redux
 4. Redux Saga
-5. Karma + Chai + Sinon
-6. Hot Module Reloading OOTB
-7. Webpack
-8. Sass
-9. Highly opinionated ducks architecture [Ducks](https://github.com/erikras/ducks-modular-redux)
+5. React Router
+6. Karma + Chai + Sinon
+7. Hot Module Reloading OOTB
+8. Webpack
+9. Sass with autoprefix
+10. ESlint using [Airbnb's library](https://github.com/airbnb/javascript)
+11. Highly opinionated [ducks architecture](https://github.com/erikras/ducks-modular-redux)
 
 ### Usage
 

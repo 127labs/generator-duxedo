@@ -1,7 +1,17 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import pure from 'recompose/pure'
 import { compose } from 'redux'
 import { reduxForm } from 'redux-form'
+
+const propTypes = {
+  fields: PropTypes.object,
+  handleSubmit: PropTypes.func,
+}
+
+const formConfig = {
+  form: 'greet',
+  fields: ['name'],
+}
 
 const GreetForm = ({ fields, handleSubmit }) =>
   <form onSubmit={ handleSubmit }>
@@ -9,20 +19,9 @@ const GreetForm = ({ fields, handleSubmit }) =>
     <button type="submit" >Greet</button>
   </form>
 
-GreetForm.propTypes = {
-  fields: React.PropTypes.object,
-  handleSubmit: React.PropTypes.func,
-}
-
-const fields = ['name']
-
-const config = { fields, form: 'greet' }
-
-const mapStateToProps = null
-
-const mapDispatchToProps = null
+GreetForm.propTypes = propTypes
 
 export default compose(
-  reduxForm(config, mapStateToProps, mapDispatchToProps),
+  reduxForm(formConfig),
   pure
 )(GreetForm)
