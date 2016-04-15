@@ -1,19 +1,13 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import pure from 'recompose/pure'
-import { compose } from 'redux'
-import { connect } from 'react-redux'
+
+const propTypes = {
+  children: PropTypes.node,
+}
 
 const App = ({ children }) =>
   <main>{ children }</main>
 
-App.propTypes = {
-  children: React.PropTypes.node,
-}
+App.propTypes = propTypes
 
-const mapStateToProps = null
-const mapDispatchToProps = null
-
-export default compose(
-  connect(mapStateToProps, mapDispatchToProps),
-  pure
-)(App)
+export default pure(App)
