@@ -64,6 +64,10 @@ module.exports = yeoman.Base.extend({
   configuring: {
     paths: function() {
       this.destinationRoot(path.join(process.cwd(), this.name));
+    },
+
+    modulesPath: function() {
+      this.config.set('modulesPath', this.destinationPath('src/modules'));
     }
   },
 
