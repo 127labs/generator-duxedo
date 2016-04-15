@@ -9,7 +9,8 @@
     "url": "https://github.com/127labs"
   },
   "files": [
-    "generators"
+    "generators/app",
+    "generators/module"
   ],
   "main": "generators/index.js",
   "keywords": [
