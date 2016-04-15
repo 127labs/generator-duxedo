@@ -52,6 +52,7 @@ module.exports = yeoman.Base.extend({
       this.log('and add the reducer as part of the combineReducers: ');
       this.log('');
       this.log(chalk.green("[" + this.name + ".constants.NAME]: " + this.name + ".reducer"));
+      this.log('');
     }
   }
 });
