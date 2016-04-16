@@ -32,7 +32,7 @@ Then, you will have these generators available to you:
 ```bash
 yo duxedo [app-name]
 
-yo duxedo:module [module-name]                          // WIP
+yo duxedo:module [module-name]
 
 yo duxedo:action [module-name] [action-name]            // WIP
 yo duxedo:container [module-name] [container-name]      // WIP
@@ -42,7 +42,7 @@ yo duxedo:component [module-name] [component-name]      // WIP
 ### TODOs
 - [x] React + redux template files
 - [x] Generate initial boilerplate with yo
-- [ ] Implement duxedo:module generator (create new module folder and append modules to rootReducer)
+- [x] Implement duxedo:module generator (create new module folder and append modules to rootReducer)
 - [ ] Implement duxedo:action generator (append generator to actions.js and types.js of specified module-name)
 - [ ] Implement duxedo:container generator (create new container file that generates smart component boilerplate)
 - [ ] Implement duxedo:component generator (create new component file that generates dumb component boilerplate)
