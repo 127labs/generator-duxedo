@@ -15,7 +15,8 @@ export default (initialState) => {
         routerMiddleware(hashHistory),
         sagaMiddleware
       ),
-      global.devToolsExtension ? global.devToolsExtension() : f => f
+      global.devToolsExtension && process.env.NODE_ENV !== 'production' ?
+        global.devToolsExtension() : f => f
     )
   )
 
