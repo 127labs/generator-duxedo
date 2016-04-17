@@ -4,24 +4,25 @@ import { compose, bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import * as actions from '../actions'
-import * as select from '../selectors'
+import * as selectors from '../selectors'
 import GreetForm from './GreetForm'
 
 const propTypes = {
   name: PropTypes.string,
   $app: PropTypes.object,
+  loading: PropTypes.boolean,
 }
 
-const Home = ({ name, $app }) =>
+const Home = ({ name, $app, loading }) =>
   <section>
-    <GreetForm onSubmit={ $app.submitGreet } />
+    <GreetForm onSubmit={ $app.submitGreet } loading={ loading } />
     <h1>Hello, { name || 'World' }!</h1>
   </section>
 
 Home.propTypes = propTypes
 
 const mapStateToProps = (state) => ({
-  name: select.name(state),
+  name: selectors.name(state),
 })
 
 const mapDispatchToProps = (dispatch) => ({
