@@ -3,8 +3,6 @@ import pure from 'recompose/pure'
 import { compose } from 'redux'
 import { reduxForm } from 'redux-form'
 
-import * as select from '../selectors'
-
 const propTypes = {
   fields: PropTypes.object,
   handleSubmit: PropTypes.func,
@@ -24,11 +22,7 @@ const GreetForm = ({ fields, handleSubmit, loading }) =>
 
 GreetForm.propTypes = propTypes
 
-const mapStateToProps = (state) => ({
-  loading: select.loading(state),
-})
-
 export default compose(
-  reduxForm(formConfig, mapStateToProps),
+  reduxForm(formConfig),
   pure
 )(GreetForm)
