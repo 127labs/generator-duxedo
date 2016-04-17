@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { compose } from 'redux'
 import pure from 'recompose/pure'
 
-import * as select from '../selectors'
+import * as selectors from '../selectors'
 
 const propTypes = {
   children: PropTypes.node.isRequired,
@@ -21,7 +21,7 @@ const App = ({ children, ...props }) =>
 App.propTypes = propTypes
 
 const mapStateToProps = (state) => ({
-  loading: select.loading(state),
+  loading: selectors.loading(state),
 })
 
 export default compose(
