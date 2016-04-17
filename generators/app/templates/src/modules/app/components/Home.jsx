@@ -10,7 +10,7 @@ import GreetForm from './GreetForm'
 const propTypes = {
   name: PropTypes.string,
   $app: PropTypes.object,
-  loading: PropTypes.boolean,
+  loading: PropTypes.bool,
 }
 
 const Home = ({ name, $app, loading }) =>

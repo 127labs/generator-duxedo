@@ -4,9 +4,9 @@ import { compose } from 'redux'
 import { reduxForm } from 'redux-form'
 
 const propTypes = {
-  fields: PropTypes.object,
+  fields: PropTypes.object.isRequired,
+  loading: PropTypes.bool.isRequired,
   handleSubmit: PropTypes.func,
-  loading: PropTypes.boolean,
 }
 
 const formConfig = {

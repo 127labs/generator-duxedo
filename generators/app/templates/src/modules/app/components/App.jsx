@@ -6,8 +6,8 @@ import pure from 'recompose/pure'
 import * as select from '../selectors'
 
 const propTypes = {
-  children: PropTypes.node,
-  loading: PropTypes.boolean,
+  children: PropTypes.node.isRequired,
+  loading: PropTypes.bool.isRequired,
 }
 
 const App = ({ children, ...props }) =>
