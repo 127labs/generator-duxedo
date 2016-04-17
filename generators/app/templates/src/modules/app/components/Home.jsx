@@ -4,7 +4,7 @@ import { compose, bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import * as actions from '../actions'
-import * as selectors from '../selectors'
+import * as select from '../selectors'
 import GreetForm from './GreetForm'
 
 const propTypes = {
@@ -21,7 +21,7 @@ const Home = ({ name, $app }) =>
 Home.propTypes = propTypes
 
 const mapStateToProps = (state) => ({
-  name: selectors.name(state),
+  name: select.name(state),
 })
 
 const mapDispatchToProps = (dispatch) => ({
