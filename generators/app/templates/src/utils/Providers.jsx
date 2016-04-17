@@ -1,5 +1,5 @@
 import React from 'react'
-import { connect, Provider } from 'react-redux'
+import { Provider } from 'react-redux'
 
 const Providers = ({ store, children }) =>
   <Provider store={ store }>
@@ -11,8 +11,4 @@ Providers.propTypes = {
   children: React.PropTypes.node,
 }
 
-const mapStateToProps = null
-
-export default connect(
-  mapStateToProps
-)(Providers)
+export default Providers
