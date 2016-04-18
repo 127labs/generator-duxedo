@@ -3,6 +3,7 @@ var yeoman = require('yeoman-generator');
 var path = require('path');
 var ejs = require('ejs');
 var fs = require('fs');
+var _ = require('lodash');
 
 module.exports = yeoman.Base.extend({
   constructor: function() {
@@ -24,7 +25,7 @@ module.exports = yeoman.Base.extend({
   writing: {
     appendAction: function() {
       var template = this.fs.read(this.templatePath('action.js.ejs'));
-      var renderedTemplate = ejs.render(template, {actionName: this.actionName});
+      var renderedTemplate = ejs.render(template, {'_': _, actionName: this.actionName});
 
       fs.appendFile(this.destinationPath('actions.js'), renderedTemplate, function(err) {
         if (err) throw err;
@@ -35,7 +36,7 @@ module.exports = yeoman.Base.extend({
 
     appendTypes: function() {
       var template = this.fs.read(this.templatePath('types.js.ejs'));
-      var renderedTemplate = ejs.render(template, {actionName: this.actionName});
+      var renderedTemplate = ejs.render(template, {'_': _, actionName: this.actionName});
 
       fs.appendFile(this.destinationPath('types.js'), renderedTemplate, function(err) {
         if (err) throw err;

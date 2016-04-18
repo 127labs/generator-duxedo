@@ -1,4 +1,4 @@
-export const <%= actionName %> = () => ({
-  type: types.<%= actionName.toUpperCase() %>,
+export const <%= _.camelCase(actionName) %> = () => ({
+  type: types.<%= _.snakeCase(actionName).toUpperCase() %>,
 })
 
