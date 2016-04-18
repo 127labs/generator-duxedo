@@ -7,11 +7,11 @@ import * as selectors from '../selectors'
 
 const propTypes = {}
 
-const <%= containerName %> = () =>
+const <%= _.pascal(containerName) %> = () =>
   <div>
   </div>
 
-<%= containerName %>.propTypes = propTypes
+<%= _.pascal(containerName) %>.propTypes = propTypes
 
 const mapStateToProps = null
 const mapDispatchToProps = null
@@ -19,4 +19,4 @@ const mapDispatchToProps = null
 export default compose(
   connect(mapStateToProps, mapDispatchToProps),
   pure
-)(<%= containerName %>)
+)(<%= _.pascal(containerName) %>)

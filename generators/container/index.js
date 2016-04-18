@@ -3,7 +3,7 @@ var yeoman = require('yeoman-generator');
 var path = require('path');
 var ejs = require('ejs');
 var fs = require('fs');
-var _ = require('lodash');
+var _ = require('case');
 
 module.exports = yeoman.Base.extend({
   constructor: function() {
@@ -25,20 +25,20 @@ module.exports = yeoman.Base.extend({
   writing: {
     appendIndex: function() {
       var template = this.fs.read(this.templatePath('index.js.ejs'));
-      var renderedTemplate = ejs.render(template, {containerName: this.containerName})
+      var renderedTemplate = ejs.render(template, {'_': _, containerName: this.containerName})
 
       fs.appendFile(this.destinationPath('index.js'), renderedTemplate, function(err) {
         if (err) throw err;
       })
 
-      this.log(this.containerName + ' container successfully appended to ' + path.join(this.moduleName, 'components', 'index.js'));
+      this.log(_.pascal(this.containerName) + ' container successfully appended to ' + path.join(this.moduleName, 'components', 'index.js'));
     },
 
     containerJS: function() {
       this.fs.copyTpl(
         this.templatePath('Container.jsx.ejs'),
-        this.destinationPath(_.capitalize(this.containerName) + '.jsx'),
-        { containerName: this.containerName }
+        this.destinationPath(_.pascal(this.containerName) + '.jsx'),
+        { '_': _, containerName: this.containerName }
       )
     }
   }
