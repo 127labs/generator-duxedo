@@ -1,1 +1,1 @@
-// import your react components here
+// export your react components here
