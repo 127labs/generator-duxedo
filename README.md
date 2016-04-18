@@ -33,8 +33,8 @@ Then, you will have these generators available to you:
 yo duxedo [app-name]
 yo duxedo:module [module-name]
 yo duxedo:action [module-name] [actionName]
-yo duxedo:container [module-name] [container-name]      // WIP
-yo duxedo:component [module-name] [component-name]      // WIP
+yo duxedo:container [module-name] [container-name]
+yo duxedo:component [module-name] [component-name]
 ```
 
 ### TODOs
@@ -42,7 +42,7 @@ yo duxedo:component [module-name] [component-name]      // WIP
 - [x] Generate initial boilerplate with yo
 - [x] Implement duxedo:module generator (create new module folder and append modules to rootReducer)
 - [x] Implement duxedo:action generator (append generator to actions.js and types.js of specified module-name)
-- [ ] Implement duxedo:container generator (create new container file that generates smart component boilerplate)
-- [ ] Implement duxedo:component generator (create new component file that generates dumb component boilerplate)
+- [x] Implement duxedo:container generator (create new container file that generates smart component boilerplate)
+- [x] Implement duxedo:component generator (create new component file that generates dumb component boilerplate)
 
 This project is currently in it's young stage, if you can find the time we encourage you to come join in and implement the todos. Feel free to open an issue or send a PR.
