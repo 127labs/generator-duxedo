@@ -3,13 +3,19 @@ var yeoman = require('yeoman-generator');
 var path = require('path');
 var ejs = require('ejs');
 var fs = require('fs');
-var _ = require('lodash');
+var chalk = require('chalk');
+var _ = require('case');
 
 module.exports = yeoman.Base.extend({
   constructor: function() {
     yeoman.Base.apply(this, arguments);
     this.argument('moduleName', {type: String, required: true});
     this.argument('actionName', {type: String, required: true});
+
+    if (_.of(this.actionName) !== 'camel') {
+      this.log(chalk.red('Please enter your action in camelCase!'));
+      process.exit(1);
+    }
   },
 
   initializing: {
