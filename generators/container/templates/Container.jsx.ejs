@@ -1,0 +1,22 @@
+import React, { PropTypes } from 'react'
+import { connect } from 'react-redux'
+import { compose } from 'redux'
+import pure from 'recompose/pure'
+
+import * as selectors from '../selectors'
+
+const propTypes = {}
+
+const <%= containerName %> = () =>
+  <div>
+  </div>
+
+<%= containerName %>.propTypes = propTypes
+
+const mapStateToProps = null
+const mapDispatchToProps = null
+
+export default compose(
+  connect(mapStateToProps, mapDispatchToProps),
+  pure
+)(<%= containerName %>)
