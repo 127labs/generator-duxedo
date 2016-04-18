@@ -6,10 +6,11 @@ import saga from '../saga'
 import configureStore, { sagaMiddleware } from './configure-store'
 
 export default (ComponentToInitialize) => () => {
-  const store = configureStore()
+  const initialState = {}
+  const store = configureStore(initialState)
   const history = syncHistoryWithStore(hashHistory, store)
 
-  sagaMiddleware.run(saga)
+  sagaMiddleware.run(saga, store.dispatch)
 
   return <ComponentToInitialize store={ store } history={ history } />
 }

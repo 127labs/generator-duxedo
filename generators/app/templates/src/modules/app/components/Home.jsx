@@ -10,11 +10,12 @@ import GreetForm from './GreetForm'
 const propTypes = {
   name: PropTypes.string,
   $app: PropTypes.object,
+  loading: PropTypes.bool,
 }
 
-const Home = ({ name, $app }) =>
+const Home = ({ name, $app, loading }) =>
   <section>
-    <GreetForm onSubmit={ $app.submitGreet } />
+    <GreetForm onSubmit={ $app.submitGreet } loading={ loading } />
     <h1>Hello, { name || 'World' }!</h1>
   </section>
 

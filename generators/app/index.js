@@ -6,7 +6,7 @@ var yosay = require('yosay');
 var path = require('path');
 
 module.exports = yeoman.Base.extend({
-  constructor: function () {
+  constructor: function() {
     yeoman.Base.apply(this, arguments);
     this.argument('name', {type: String, required: true});
   },

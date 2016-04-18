@@ -9,4 +9,4 @@ export const getClassNames = (classNames) =>
 export const delay = (millis) =>
   new Promise(resolve => setTimeout(() => resolve(true), millis))
 
-export * from './http'
+export { default as HTTP } from './http'

@@ -4,7 +4,7 @@ var chalk = require('chalk');
 var path = require('path');
 
 module.exports = yeoman.Base.extend({
-  constructor: function () {
+  constructor: function() {
     yeoman.Base.apply(this, arguments);
     this.argument('name', {type: String, required: true});
   },
@@ -51,7 +51,7 @@ module.exports = yeoman.Base.extend({
       this.log('');
       this.log('and add the reducer as part of the combineReducers: ');
       this.log('');
-      this.log(chalk.green("[" + this.name + ".constants.NAME]: " + this.name + ".reducer"));
+      this.log(chalk.green("[" + this.name + ".constants.NAME]: " + this.name + ".reducer,"));
       this.log('');
     }
   }

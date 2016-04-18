@@ -1,6 +1,6 @@
 {
   "name": "generator-duxedo",
-  "version": "0.0.3",
+  "version": "1.0.0-alpha",
   "description": "No bullshit React Redux project generator",
   "homepage": "https://github.com/127labs/generator-duxedo",
   "author": {
@@ -10,7 +10,10 @@
   },
   "files": [
     "generators/app",
-    "generators/module"
+    "generators/module",
+    "generators/action",
+    "generators/container",
+    "generators/component"
   ],
   "main": "generators/index.js",
   "keywords": [
@@ -20,6 +23,7 @@
     "yeoman-generator"
   ],
   "dependencies": {
+    "case": "^1.4.1",
     "chalk": "^1.0.0",
     "mkdirp": "^0.5.1",
     "yeoman-generator": "^0.22.0",
