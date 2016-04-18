@@ -12,7 +12,8 @@
     "generators/app",
     "generators/module",
     "generators/action",
-    "generators/container"
+    "generators/container",
+    "generators/component"
   ],
   "main": "generators/index.js",
   "keywords": [
