@@ -9,4 +9,6 @@ const config = require('hjs-webpack')({
   },
 })
 
+config.entry.unshift('react-hot-loader/patch')
+
 module.exports = config
