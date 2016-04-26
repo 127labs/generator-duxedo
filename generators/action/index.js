@@ -12,8 +12,8 @@ module.exports = yeoman.Base.extend({
     this.argument('moduleName', {type: String, required: true});
     this.argument('actionName', {type: String, required: true});
 
-    if (_.of(this.actionName) !== 'camel') {
-      this.log(chalk.red('Please enter your action in camelCase!'));
+    if (_.of(this.actionName) !== 'camel' && _.of(this.actionName) !== 'lower') {
+      this.log(chalk.red('Please enter your action in camelCase or lowercase!'));
       process.exit(1);
     }
   },
