@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/127labs/generator-duxedo.png?label=ready&title=Ready)](https://waffle.io/127labs/generator-duxedo)
 # Duxedo
 > No bullshit React + Redux project generator
 
