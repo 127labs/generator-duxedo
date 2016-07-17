@@ -67,7 +67,7 @@ module.exports = yeoman.Base.extend({
     },
 
     modulesPath: function() {
-      this.config.set('modulesPath', this.destinationPath('src/modules'));
+      this.config.set('modulesPath', 'src/modules');
     }
   },
 
