@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom'
 const mountEl = document.getElementById('root')
 
 let render = () => {
-  const Application = require('bootstrap/Application').default
+  const Application = require('config/Application').default
   ReactDOM.render(<Application />, mountEl)
 }
 
@@ -26,7 +26,7 @@ if (module.hot) {
     }
   }
 
-  module.hot.accept('bootstrap/Application', () => {
+  module.hot.accept('config/Application', () => {
     setTimeout(render)
   })
 }
