@@ -1,13 +1,11 @@
-import * as types from './types'
+import * as types from 'app/types'
 
-const initialState = { loading: false }
-
-export default (state = initialState, action) => {
+export default (state = { isPinging: false }, action) => {
   switch (action.type) {
-    case types.SUBMIT_GREET:
-      return { ...state, loading: true }
-    case types.GREET:
-      return { ...state, name: action.payload, loading: false }
+    case types.PING:
+      return { isPinging: true }
+    case types.PONG:
+      return { isPinging: false }
     default:
       return state
   }

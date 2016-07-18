@@ -1,4 +1,4 @@
-import { NAME } from './constants'
+import { NAME } from 'app/constants'
 
-export const GREET = `${NAME}/GREET`
-export const SUBMIT_GREET = `${NAME}/SUBMIT_GREET`
+export const PING = `${NAME}/PING`
+export const PONG = `${NAME}/PONG`

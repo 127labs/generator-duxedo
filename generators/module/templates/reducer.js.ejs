@@ -1,11 +1,10 @@
-import * as types from './types'
+import * as types from '<%= name %>/types'
 
 const initialState = {}
 
 export default (state = initialState, action) => {
   switch (action.type) {
     case types.ACTION:
-      // your new state goes here!
       return { ...state }
     default:
       return state

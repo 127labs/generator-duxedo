@@ -1,20 +1,24 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
-import { compose } from 'redux'
+import { compose, bindActionCreators } from 'redux'
 import pure from 'recompose/pure'
 
-import * as selectors from '../selectors'
+import * as selectors from '<%= name %>/selectors'
+import * as actions from '<%= name %>/actions'
 
-const propTypes = {}
-
-const <%= _.pascal(containerName) %> = () =>
+const <%= _.pascal(containerName) %> = ({ $actions, all }) =>
   <div>
   </div>
 
-<%= _.pascal(containerName) %>.propTypes = propTypes
+const mapStateToProps = (state) => ({
+  // maps state to all <%= name %> props
+  all: selectors.all(state)
+})
 
-const mapStateToProps = null
-const mapDispatchToProps = null
+const mapDispatchToProps = (dispatch) => ({
+  // maps dispatch to all <%= name %> actions
+  $actions: bindActionCreators(actions, dispatch)
+})
 
 export default compose(
   connect(mapStateToProps, mapDispatchToProps),

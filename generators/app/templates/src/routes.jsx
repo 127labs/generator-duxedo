@@ -1,20 +1,20 @@
 import React from 'react'
-import { IndexRoute, Route } from 'react-router'
+import { Route, IndexRoute } from 'react-router'
 
-import requireAuth from './middleware/requireAuth'
-import app from './modules/app'
+import requireAuth from 'middleware/requireAuth'
+import app from 'app'
 
 export default (
-  <Route path="/" component={ app.components.App }>
-    { /* Index Route */ }
-    <IndexRoute component={ app.components.Home } />
+  <Route path='/' component={app.components.App}>
+    {/* Index Route */}
+    <IndexRoute component={app.components.Home} />
 
-    { /* Routes */ }
-    <Route onEnter={ requireAuth }>
-      { /* Routes requiring login */ }
+    {/* Routes */}
+    <Route onEnter={requireAuth}>
+      {/* Routes requiring login */}
     </Route>
 
-    { /* Catch all route */ }
-    <Route path="*" component={ app.components.NotFound } status={ 404 } />
+    {/* Catch all route */}
+    <Route path='*' component={app.components.NotFound} status={404} />
   </Route>
 )

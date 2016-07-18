@@ -4,7 +4,7 @@ export default (nextState, replace) => {
   if (authenticated) {
     replace({
       pathname: '/',
-      state: { nextPathname: nextState.location.pathname },
+      state: { nextPathname: nextState.location.pathname }
     })
   }
 }

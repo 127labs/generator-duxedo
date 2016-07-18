@@ -1,12 +1,14 @@
-import Setting from '../settings'
+import Setting from 'config/settings'
 
 export default (method, endpoint, params) => {
   let body
   const query = new URL(`${Setting.http.url}/${endpoint}`)
   const handleError = error => ({
-    errors: [{ title: 'We are under heavy load right now, please try again in a few minutes',
-      detail: 'We are under heavy load right now, please try again in a few minutes',
-      source: { pointer: error } }],
+    errors: [{
+      title: 'Something went wrong, let\'s try again?',
+      detail: 'This could be due to our server being under heavy load',
+      source: { pointer: error }
+    }]
   })
 
   if (method.toUpperCase() === 'GET' && params) {
