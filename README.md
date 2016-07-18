@@ -10,7 +10,7 @@ Getting into react development is a very challenging task. First, you need to co
 ### Features
 1. React
 3. Redux
-4. Redux Saga
+4. Redux Observable
 5. React Router
 6. Karma + Chai + Sinon
 7. Hot Module Reloading OOTB
