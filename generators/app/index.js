@@ -103,8 +103,26 @@ module.exports = yeoman.Base.extend({
 
     settingsJS: function() {
       this.fs.copyTpl(
-        this.templatePath('src/settings.js.ejs'),
-        this.destinationPath('src/settings.js'),
+        this.templatePath('src/config/settings/index.js.ejs'),
+        this.destinationPath('src/config/settings/index.js'),
+        { dev_api: this.props.dev_api,
+          prod_api: this.props.prod_api }
+      );
+    },
+
+    productionJS: function() {
+      this.fs.copyTpl(
+        this.templatePath('src/config/settings/production.js.ejs'),
+        this.destinationPath('src/config/settings/production.js'),
+        { dev_api: this.props.dev_api,
+          prod_api: this.props.prod_api }
+      );
+    },
+
+    developmentJS: function() {
+      this.fs.copyTpl(
+        this.templatePath('src/config/settings/development.js.ejs'),
+        this.destinationPath('src/config/settings/development.js'),
         { dev_api: this.props.dev_api,
           prod_api: this.props.prod_api }
       );

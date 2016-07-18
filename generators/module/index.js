@@ -39,6 +39,46 @@ module.exports = yeoman.Base.extend({
         this.destinationPath('selectors.js'),
         { name: this.name }
       )
+    },
+
+    actionsJS: function() {
+      this.fs.copyTpl(
+        this.templatePath('actions.js.ejs'),
+        this.destinationPath('actions.js'),
+        { name: this.name }
+      )
+    },
+
+    epicsJS: function() {
+      this.fs.copyTpl(
+        this.templatePath('epics.js.ejs'),
+        this.destinationPath('epics.js'),
+        { name: this.name }
+      )
+    },
+
+    indexJS: function() {
+      this.fs.copyTpl(
+        this.templatePath('index.js.ejs'),
+        this.destinationPath('index.js'),
+        { name: this.name }
+      )
+    },
+
+    reducerJS: function() {
+      this.fs.copyTpl(
+        this.templatePath('reducer.js.ejs'),
+        this.destinationPath('reducer.js'),
+        { name: this.name }
+      )
+    },
+
+    typesJS: function() {
+      this.fs.copyTpl(
+        this.templatePath('types.js.ejs'),
+        this.destinationPath('types.js'),
+        { name: this.name }
+      )
     }
   },
 
