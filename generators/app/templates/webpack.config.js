@@ -4,9 +4,16 @@ const config = require('hjs-webpack')({
   clearBeforeBuild: true,
   devServer: {
     stats: {
-      colors: true,
-    },
-  },
+      colors: true
+    }
+  }
 })
+
+config.resolve.modulesDirectories = [
+  'web_modules',
+  'node_modules',
+  'src',
+  'src/modules/'
+]
 
 module.exports = config
