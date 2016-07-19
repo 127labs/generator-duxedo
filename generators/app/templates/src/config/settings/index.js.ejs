@@ -1,22 +1,19 @@
+import merge from 'lodash/merge'
+
 import production from 'config/settings/production'
 import development from 'config/settings/development'
 import staging from 'config/settings/staging'
 
-const settings = {
-  http: {
-    url: '<%= dev_api %>',
-    mode: 'cors'
-  }
-}
+const settings = {}
 
 export default (() => {
   switch (process.env.NODE_ENV) {
     case 'production':
-      return { ...production, ...settings }
+      return merge(production, settings)
     case 'development':
-      return { ...development, ...settings }
+      return merge(development, settings)
     case 'staging':
-      return { ...staging, ...settings }
+      return merge(staging, settings)
     default:
       return settings
   }
