@@ -1,21 +1,19 @@
-import 'babel-polyfill'
-import 'whatwg-fetch'
 import React from 'react'
 import ReactDOM from 'react-dom'
 
 const mountEl = document.getElementById('root')
 
 let render = () => {
-  const Root = require('./utils/Root').default
-  ReactDOM.render(<Root />, mountEl)
+  const App = require('config/App').default
+  ReactDOM.render(<App />, mountEl)
 }
 
 if (module.hot) {
   const renderApp = render
   const renderError = (error) => {
-    const RedBox = require('redbox-react')
+    const RedBox = require('redbox-react').default
     ReactDOM.render(
-      <RedBox error={ error } />.mountEl
+      <RedBox error={error} />, mountEl
     )
   }
 
@@ -27,7 +25,7 @@ if (module.hot) {
     }
   }
 
-  module.hot.accept('./utils/Root', () => {
+  module.hot.accept('config/App', () => {
     setTimeout(render)
   })
 }

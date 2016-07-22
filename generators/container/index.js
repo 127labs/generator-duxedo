@@ -25,7 +25,10 @@ module.exports = yeoman.Base.extend({
   writing: {
     appendIndex: function() {
       var template = this.fs.read(this.templatePath('index.js.ejs'));
-      var renderedTemplate = ejs.render(template, {'_': _, containerName: this.containerName})
+      var renderedTemplate = ejs.render(template, {
+        '_': _,
+        containerName: this.containerName
+      })
 
       fs.appendFile(this.destinationPath('index.js'), renderedTemplate, function(err) {
         if (err) throw err;
@@ -36,9 +39,13 @@ module.exports = yeoman.Base.extend({
 
     containerJS: function() {
       this.fs.copyTpl(
-        this.templatePath('Container.jsx.ejs'),
-        this.destinationPath(_.pascal(this.containerName) + '.jsx'),
-        { '_': _, containerName: this.containerName }
+        this.templatePath('Container.js.ejs'),
+        this.destinationPath(_.pascal(this.containerName) + '.js'),
+        {
+          '_': _,
+          containerName: this.containerName,
+          name: this.moduleName
+        }
       )
     }
   }

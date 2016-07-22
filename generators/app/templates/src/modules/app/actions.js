@@ -1,11 +1,9 @@
 import * as types from './types'
 
-export const greet = (name) => ({
-  type: types.GREET,
-  payload: name,
+export const ping = () => ({
+  type: types.PING
 })
 
-export const submitGreet = (params) => ({
-  type: types.SUBMIT_GREET,
-  payload: params,
+export const pong = () => ({
+  type: types.PONG
 })

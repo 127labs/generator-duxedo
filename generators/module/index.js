@@ -31,14 +31,6 @@ module.exports = yeoman.Base.extend({
         this.destinationPath('constants.js'),
         { name: this.name }
       )
-    },
-
-    selectorsJS: function() {
-      this.fs.copyTpl(
-        this.templatePath('selectors.js.ejs'),
-        this.destinationPath('selectors.js'),
-        { name: this.name }
-      )
     }
   },
 
@@ -46,12 +38,17 @@ module.exports = yeoman.Base.extend({
     logInstructions: function() {
       this.log('');
       this.log('Great, now import the module generated into your root reducer in src/reducer.js:');
+      this.log('and your root epic in src/epic.js:');
       this.log('');
-      this.log(chalk.green("import " + this.name + " from './modules/" + this.name + "'"));
+      this.log(chalk.green("import " + this.name + " from '" + this.name + "'"));
       this.log('');
       this.log('and add the reducer as part of the combineReducers: ');
       this.log('');
-      this.log(chalk.green("[" + this.name + ".constants.NAME]: " + this.name + ".reducer,"));
+      this.log(chalk.green("[" + this.name + ".constants.NAME]: " + this.name + ".reducer"));
+      this.log('');
+      this.log('and add ' + this.name + 'epic as part of the combineEpics: ');
+      this.log('');
+      this.log(chalk.green("Object.values(" + this.name + ".epics)"));
       this.log('');
     }
   }
