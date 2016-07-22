@@ -1,4 +1,4 @@
-import * as types from '<%= name %>/types'
+import * as types from './types'
 
 export const epic = (action$, store) => {
   // Learn more about epic and observables at

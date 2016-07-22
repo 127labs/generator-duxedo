@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { compose, bindActionCreators } from 'redux'
-import pure from 'recompose/pure'
+import { pure } from 'recompose'
 
 import * as selectors from '<%= name %>/selectors'
 import * as actions from '<%= name %>/actions'
@@ -11,8 +11,8 @@ const <%= _.pascal(containerName) %> = ({ $actions, all }) =>
   </div>
 
 const mapStateToProps = (state) => ({
-  // maps state to all <%= name %> props
-  all: selectors.all(state)
+  // maps state to <%= name %> branch
+  tree: selectors.tree(state)
 })
 
 const mapDispatchToProps = (dispatch) => ({

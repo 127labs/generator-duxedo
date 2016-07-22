@@ -1,5 +1,5 @@
-import * as types from 'app/types'
-import * as actions from 'app/actions'
+import * as types from './types'
+import * as actions from './actions'
 
 export const pingEpic = (action$, store) =>
   action$.ofType(types.PING)

@@ -1,4 +1,4 @@
-import { NAME } from 'app/constants'
+import { NAME } from './constants'
 
 export const PING = `${NAME}/PING`
 export const PONG = `${NAME}/PONG`

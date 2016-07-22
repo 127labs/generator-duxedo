@@ -1,3 +1,3 @@
-export { default as App } from 'app/components/App'
-export { default as Home } from 'app/components/Home'
-export { default as NotFound } from 'app/components/NotFound'
+export { default as Base } from './Base'
+export { default as Home } from './Home'
+export { default as NotFound } from './NotFound'

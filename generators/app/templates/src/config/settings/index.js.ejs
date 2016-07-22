@@ -1,17 +1,18 @@
-import production from 'config/settings/production'
-import development from 'config/settings/development'
-import staging from 'config/settings/staging'
+import { merge } from 'lodash'
+import production from './production'
+import development from './development'
+import staging from './staging'
 
 const settings = {}
 
 export default (() => {
   switch (process.env.NODE_ENV) {
     case 'production':
-      return _.merge(production, settings)
+      return merge(production, settings)
     case 'staging':
-      return _.merge(staging, settings)
+      return merge(staging, settings)
     case 'development':
     default:
-      return _.merge(development, settings)
+      return merge(development, settings)
   }
 })()

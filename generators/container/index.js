@@ -39,8 +39,8 @@ module.exports = yeoman.Base.extend({
 
     containerJS: function() {
       this.fs.copyTpl(
-        this.templatePath('Container.jsx.ejs'),
-        this.destinationPath(_.pascal(this.containerName) + '.jsx'),
+        this.templatePath('Container.js.ejs'),
+        this.destinationPath(_.pascal(this.containerName) + '.js'),
         {
           '_': _,
           containerName: this.containerName,

@@ -1,12 +1,11 @@
-import 'config/imports'
 import React from 'react'
 import ReactDOM from 'react-dom'
 
 const mountEl = document.getElementById('root')
 
 let render = () => {
-  const Application = require('config/Application').default
-  ReactDOM.render(<Application />, mountEl)
+  const App = require('config/App').default
+  ReactDOM.render(<App />, mountEl)
 }
 
 if (module.hot) {
@@ -26,7 +25,7 @@ if (module.hot) {
     }
   }
 
-  module.hot.accept('config/Application', () => {
+  module.hot.accept('config/App', () => {
     setTimeout(render)
   })
 }

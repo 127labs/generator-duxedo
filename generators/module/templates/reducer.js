@@ -1,4 +1,4 @@
-import * as types from '<%= name %>/types'
+import * as types from './types'
 
 const initialState = {}
 

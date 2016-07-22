@@ -1,4 +1,4 @@
-import * as types from 'app/types'
+import * as types from './types'
 
 export default (state = { isPinging: false }, action) => {
   switch (action.type) {

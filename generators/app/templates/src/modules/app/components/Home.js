@@ -1,9 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-
-import * as actions from 'app/actions'
-import * as selectors from 'app/selectors'
+import { compose, bindActionCreators } from 'redux'
+import { pure } from 'recompose'
+import * as actions from '../actions'
+import * as selectors from '../selectors'
 
 const Home = ({ isPinging, $actions }) =>
   <div>
@@ -19,4 +19,7 @@ const mapDispatchToActions = (dispatch) => ({
   $actions: bindActionCreators(actions, dispatch)
 })
 
-export default connect(mapStateToProps, mapDispatchToActions)(Home)
+export default compose(
+  connect(mapStateToProps, mapDispatchToActions),
+  pure
+)(Home)

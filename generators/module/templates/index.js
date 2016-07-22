@@ -6,4 +6,4 @@ import * as components from './components'
 import * as epics from './epics'
 import reducer from './reducer'
 
-export default { actions, types, selectors, reducer, constants, components, epics }
+export default { actions, types, selectors, reducer, epics, constants, components }
