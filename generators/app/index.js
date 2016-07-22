@@ -44,14 +44,19 @@ module.exports = yeoman.Base.extend({
         default: '127labs.surge.sh'
       }, {
         type: 'input',
-        name: 'dev_api',
+        name: 'development_api',
         message: 'Development API endpoint',
         default: 'http://localhost:4000/api'
       }, {
         type: 'input',
-        name: 'prod_api',
+        name: 'production_api',
         message: 'Production API endpoint',
         default: 'http://127labs.herokuapp.com/api'
+      }, {
+        type: 'input',
+        name: 'staging_api',
+        message: 'Staging API endpoint',
+        default: 'http://127labs-staging.herokuapp.com/api'
       }];
 
       this.prompt(prompts, function (props) {
@@ -101,12 +106,11 @@ module.exports = yeoman.Base.extend({
       );
     },
 
-    settingsJS: function() {
+    stagingJS: function() {
       this.fs.copyTpl(
-        this.templatePath('src/config/settings/index.js.ejs'),
-        this.destinationPath('src/config/settings/index.js'),
-        { dev_api: this.props.dev_api,
-          prod_api: this.props.prod_api }
+        this.templatePath('src/config/settings/staging.js.ejs'),
+        this.destinationPath('src/config/settings/staging.js'),
+        { staging_api: this.props.staging_api }
       );
     },
 
@@ -114,8 +118,7 @@ module.exports = yeoman.Base.extend({
       this.fs.copyTpl(
         this.templatePath('src/config/settings/production.js.ejs'),
         this.destinationPath('src/config/settings/production.js'),
-        { dev_api: this.props.dev_api,
-          prod_api: this.props.prod_api }
+        { production_api: this.props.production_api }
       );
     },
 
@@ -123,8 +126,7 @@ module.exports = yeoman.Base.extend({
       this.fs.copyTpl(
         this.templatePath('src/config/settings/development.js.ejs'),
         this.destinationPath('src/config/settings/development.js'),
-        { dev_api: this.props.dev_api,
-          prod_api: this.props.prod_api }
+        { development_api: this.props.development_api }
       );
     }
   },
