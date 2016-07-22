@@ -4,6 +4,7 @@ import routes from 'routes'
 import initialize from './initialize'
 import Providers from './Providers'
 import 'babel-polyfill'
+import 'rxjs'
 import 'assets/styles/app.scss'
 
 const App = ({ store, history }) =>
