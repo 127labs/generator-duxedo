@@ -31,11 +31,11 @@ npm install -g generator-duxedo
 Then, you will have these generators available to you:
 
 ```bash
-yo duxedo [app-name]
-yo duxedo:module [module-name]
-yo duxedo:action [module-name] [actionName]
-yo duxedo:container [module-name] [container-name]
-yo duxedo:component [module-name] [component-name]
+yo duxedo <app-name>
+yo duxedo:module <module-name>
+yo duxedo:action <module-name> <actionName>
+yo duxedo:container <module-name> <container-name>
+yo duxedo:component <module-name> <component-name>
 ```
 
 ### TODOs
