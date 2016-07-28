@@ -16,7 +16,7 @@ Getting into react development is a very challenging task. First, you need to co
 7. Hot Module Reloading OOTB
 8. Webpack
 9. Sass with autoprefix
-10. ESlint using [Airbnb's library](https://github.com/airbnb/javascript)
+10. Optional linting using [StandardJS](https://github.com/feross/standard)
 11. Highly opinionated [ducks architecture](https://github.com/erikras/ducks-modular-redux)
 
 ### Usage
