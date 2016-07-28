@@ -1,6 +1,6 @@
 {
   "name": "generator-duxedo",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0-rc.2",
   "description": "No bullshit React Redux project generator",
   "homepage": "https://github.com/127labs/generator-duxedo",
   "author": {
