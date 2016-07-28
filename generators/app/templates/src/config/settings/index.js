@@ -1,4 +1,4 @@
-import { merge } from 'lodash'
+import merge from 'lodash/merge'
 import production from './production'
 import development from './development'
 import staging from './staging'

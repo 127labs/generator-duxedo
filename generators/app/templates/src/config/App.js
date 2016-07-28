@@ -3,9 +3,7 @@ import { Router } from 'react-router'
 import routes from 'routes'
 import initialize from './initialize'
 import Providers from './Providers'
-import 'babel-polyfill'
-import 'rxjs'
-import 'assets/styles/app.scss'
+import './manifest'
 
 const App = ({ store, history }) =>
   <Providers store={store}>
