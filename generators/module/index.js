@@ -48,7 +48,7 @@ module.exports = yeoman.Base.extend({
       this.log('');
       this.log('and add ' + this.name + 'epic as part of the combineEpics: ');
       this.log('');
-      this.log(chalk.green("Object.values(" + this.name + ".epics)"));
+      this.log(chalk.green("...Object.values(" + this.name + ".epics)"));
       this.log('');
     }
   }
